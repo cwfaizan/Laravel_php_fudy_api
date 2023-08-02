@@ -11,7 +11,7 @@ class RecipeController extends Controller
 {
     use ApiResponser;
     /**
-     * Display a listing of the Recipe.
+     * Display a list of the Recipe.
      */
     public function index(Request $req)
     {
