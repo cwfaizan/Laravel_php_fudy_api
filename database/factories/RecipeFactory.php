@@ -21,7 +21,7 @@ class RecipeFactory extends Factory
             'image_url' => 'https://source.unsplash.com/random',
             'quantity' => random_int(20, 50),
             'price' => random_int(300, 500),
-            'category_id' => random_int(1, 50),
+            'category_id' => random_int(1, 8),
         ];
     }
 }

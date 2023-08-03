@@ -22,11 +22,10 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
-        Category::factory()->count(50)->create();
         Recipe::factory()->count(200)->create();
-        // $this->call(CategorySeeder::class);
-        // $this->call(PublisherSeeder::class);
-        // $this->call(FloorSeeder::class);
+        $this->call(RoleSeeder::class);
+        $this->call(UserSeeder::class);
+        $this->call(CategorySeeder::class);
         // $this->call(ShelfSeeder::class);
         // Book::factory()->count(1000)->create();
         // $this->call(BookAuthorSeeder::class);
