@@ -4,11 +4,13 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use App\Traits\ApiResponser;
 use Illuminate\Http\Request;
 use Knuckles\Scribe\Attributes\Header;
 
 class CategoryController extends Controller
 {
+    use ApiResponser;
     /**
      * Display a listing of the resource.
      */

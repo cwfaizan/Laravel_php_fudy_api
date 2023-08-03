@@ -31,12 +31,20 @@ Route::post('/reset-password', [PasswordController::class, 'resetPassword']);
 Route::middleware(['auth:api'])->group(function () {
     Route::get('/logout', [AuthController::class, 'invalidateToken']);
     // Route::apiResource('categories', CategoryController::class);
-    Route::get('categories', [CategoryController::class, 'index']);
-    Route::apiResource('recipes', RecipeController::class);
-    Route::get('tables', [MaizeController::class, 'index']);
-    Route::apiResource('orders', OrderController::class);
-    Route::delete('complete-order', [OrderController::class, 'destroyCompleteOrder']);
-    Route::post('/print-bill', [BillController::class, 'printBill']);
+
+    // Route::get('categories', [CategoryController::class, 'index']);
+    // Route::apiResource('recipes', RecipeController::class);
+    // Route::get('tables', [MaizeController::class, 'index']);
+    // Route::apiResource('orders', OrderController::class);
+    // Route::delete('complete-order', [OrderController::class, 'destroyCompleteOrder']);
+    // Route::post('/print-bill', [BillController::class, 'printBill']);
+
     //     Route::put('/change-contact-no/{userId}', [UserController::class, 'changeContactNo']);
     //     Route::post('/change-password', [PasswordController::class, 'changePassword']);
 });
+Route::get('categories', [CategoryController::class, 'index']);
+Route::apiResource('recipes', RecipeController::class);
+Route::get('tables', [MaizeController::class, 'index']);
+Route::apiResource('orders', OrderController::class);
+Route::delete('complete-order', [OrderController::class, 'destroyCompleteOrder']);
+Route::post('/print-bill', [BillController::class, 'printBill']);
