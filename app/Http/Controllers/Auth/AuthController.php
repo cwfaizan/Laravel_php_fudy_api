@@ -139,7 +139,7 @@ class AuthController extends Controller
         if (Auth::attempt($credentials)) {
             if (Auth::user()->hasAccount($request->account_type)) {
                 $token = $this->generateToken();
-                return $this->successResponse(['user_id' => [Auth::id()], 'profile_url' => [Auth::user()->profile_url], 'first_name' => [Auth::user()->first_name], 'last_name' => [Auth::user()->last_name], 'token_type' => ['Bearer'], 'token' => [$token->accessToken], 'token_expires_at' => [$token->token->expires_at], 'roles' => $token->token->scopes], 'successfully login');
+                return $this->successResponse(['user_id' => [Auth::id()], 'name' => [Auth::user()->name], 'token_type' => ['Bearer'], 'token' => [$token->accessToken], 'token_expires_at' => [$token->token->expires_at], 'roles' => $token->token->scopes], 'successfully login');
             } else {
                 $this->invalidateToken();
                 return $this->errorResponse(['auth' => ['Invalid login credentials']], 401);

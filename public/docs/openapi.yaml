@@ -1,6 +1,6 @@
 openapi: 3.0.3
 info:
-  title: Laravel
+  title: Fudy
   description: ''
   version: 1.0.0
 servers:
@@ -65,1289 +65,55 @@ paths:
           in: query
           name: pin_type
           description: ''
-          example: 14
+          example: 2
           required: true
           schema:
             type: integer
             description: ''
-            example: 14
+            example: 2
         -
           in: query
           name: pin
           description: ''
-          example: 16
+          example: 13
           required: true
           schema:
             type: integer
             description: ''
-            example: 16
+            example: 13
       responses:
-        500:
+        422:
           description: ''
           content:
             application/json:
               schema:
                 type: object
                 example:
-                  message: 'View [error-page] not found.'
-                  exception: InvalidArgumentException
-                  file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php'
-                  line: 137
-                  trace:
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php'
-                      line: 79
-                      function: findInPaths
-                      class: Illuminate\View\FileViewFinder
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\View\Factory.php'
-                      line: 137
-                      function: find
-                      class: Illuminate\View\FileViewFinder
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Foundation\helpers.php'
-                      line: 1017
-                      function: make
-                      class: Illuminate\View\Factory
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\app\Http\Controllers\Auth\PinVerificationController.php'
-                      line: 106
-                      function: view
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Routing\Controller.php'
-                      line: 54
-                      function: verifyPin
-                      class: App\Http\Controllers\Auth\PinVerificationController
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Routing\ControllerDispatcher.php'
-                      line: 43
-                      function: callAction
-                      class: Illuminate\Routing\Controller
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Routing\Route.php'
-                      line: 259
-                      function: dispatch
-                      class: Illuminate\Routing\ControllerDispatcher
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Routing\Route.php'
-                      line: 205
-                      function: runController
-                      class: Illuminate\Routing\Route
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
-                      line: 799
-                      function: run
-                      class: Illuminate\Routing\Route
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                      line: 141
-                      function: 'Illuminate\Routing\{closure}'
-                      class: Illuminate\Routing\Router
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Routing\Middleware\SubstituteBindings.php'
-                      line: 50
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                      line: 180
-                      function: handle
-                      class: Illuminate\Routing\Middleware\SubstituteBindings
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php'
-                      line: 159
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php'
-                      line: 125
-                      function: handleRequest
-                      class: Illuminate\Routing\Middleware\ThrottleRequests
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php'
-                      line: 87
-                      function: handleRequestUsingNamedLimiter
-                      class: Illuminate\Routing\Middleware\ThrottleRequests
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                      line: 180
-                      function: handle
-                      class: Illuminate\Routing\Middleware\ThrottleRequests
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                      line: 116
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
-                      line: 798
-                      function: then
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
-                      line: 777
-                      function: runRouteWithinStack
-                      class: Illuminate\Routing\Router
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
-                      line: 741
-                      function: runRoute
-                      class: Illuminate\Routing\Router
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
-                      line: 730
-                      function: dispatchToRoute
-                      class: Illuminate\Routing\Router
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php'
-                      line: 200
-                      function: dispatch
-                      class: Illuminate\Routing\Router
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                      line: 141
-                      function: 'Illuminate\Foundation\Http\{closure}'
-                      class: Illuminate\Foundation\Http\Kernel
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php'
-                      line: 21
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull.php'
-                      line: 31
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\TransformsRequest
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                      line: 180
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php'
-                      line: 21
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TrimStrings.php'
-                      line: 40
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\TransformsRequest
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                      line: 180
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\TrimStrings
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ValidatePostSize.php'
-                      line: 27
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                      line: 180
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\ValidatePostSize
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance.php'
-                      line: 86
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                      line: 180
-                      function: handle
-                      class: Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Http\Middleware\HandleCors.php'
-                      line: 62
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                      line: 180
-                      function: handle
-                      class: Illuminate\Http\Middleware\HandleCors
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Http\Middleware\TrustProxies.php'
-                      line: 39
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                      line: 180
-                      function: handle
-                      class: Illuminate\Http\Middleware\TrustProxies
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                      line: 116
-                      function: 'Illuminate\Pipeline\{closure}'
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php'
-                      line: 175
-                      function: then
-                      class: Illuminate\Pipeline\Pipeline
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php'
-                      line: 144
-                      function: sendRequestThroughRouter
-                      class: Illuminate\Foundation\Http\Kernel
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php'
-                      line: 299
-                      function: handle
-                      class: Illuminate\Foundation\Http\Kernel
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php'
-                      line: 287
-                      function: callLaravelOrLumenRoute
-                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php'
-                      line: 92
-                      function: makeApiCall
-                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php'
-                      line: 45
-                      function: makeResponseCall
-                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php'
-                      line: 35
-                      function: makeResponseCallIfConditionsPass
-                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\knuckleswtf\scribe\src\Extracting\Extractor.php'
-                      line: 209
-                      function: __invoke
-                      class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\knuckleswtf\scribe\src\Extracting\Extractor.php'
-                      line: 163
-                      function: iterateThroughStrategies
-                      class: Knuckles\Scribe\Extracting\Extractor
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\knuckleswtf\scribe\src\Extracting\Extractor.php'
-                      line: 95
-                      function: fetchResponses
-                      class: Knuckles\Scribe\Extracting\Extractor
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\knuckleswtf\scribe\src\GroupedEndpoints\GroupedEndpointsFromApp.php'
-                      line: 124
-                      function: processRoute
-                      class: Knuckles\Scribe\Extracting\Extractor
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\knuckleswtf\scribe\src\GroupedEndpoints\GroupedEndpointsFromApp.php'
-                      line: 71
-                      function: extractEndpointsInfoFromLaravelApp
-                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\knuckleswtf\scribe\src\GroupedEndpoints\GroupedEndpointsFromApp.php'
-                      line: 49
-                      function: extractEndpointsInfoAndWriteToDisk
-                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\knuckleswtf\scribe\src\Commands\GenerateDocumentation.php'
-                      line: 51
-                      function: get
-                      class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php'
-                      line: 36
-                      function: handle
-                      class: Knuckles\Scribe\Commands\GenerateDocumentation
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Container\Util.php'
-                      line: 41
-                      function: 'Illuminate\Container\{closure}'
-                      class: Illuminate\Container\BoundMethod
-                      type: '::'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php'
-                      line: 93
-                      function: unwrapIfClosure
-                      class: Illuminate\Container\Util
-                      type: '::'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php'
-                      line: 35
-                      function: callBoundMethod
-                      class: Illuminate\Container\BoundMethod
-                      type: '::'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Container\Container.php'
-                      line: 662
-                      function: call
-                      class: Illuminate\Container\BoundMethod
-                      type: '::'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Console\Command.php'
-                      line: 211
-                      function: call
-                      class: Illuminate\Container\Container
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\symfony\console\Command\Command.php'
-                      line: 326
-                      function: execute
-                      class: Illuminate\Console\Command
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Console\Command.php'
-                      line: 180
-                      function: run
-                      class: Symfony\Component\Console\Command\Command
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\symfony\console\Application.php'
-                      line: 1081
-                      function: run
-                      class: Illuminate\Console\Command
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\symfony\console\Application.php'
-                      line: 320
-                      function: doRunCommand
-                      class: Symfony\Component\Console\Application
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\symfony\console\Application.php'
-                      line: 174
-                      function: doRun
-                      class: Symfony\Component\Console\Application
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Console\Application.php'
-                      line: 162
-                      function: run
-                      class: Symfony\Component\Console\Application
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php'
-                      line: 400
-                      function: call
-                      class: Illuminate\Console\Application
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Support\Facades\Facade.php'
-                      line: 353
-                      function: call
-                      class: Illuminate\Foundation\Console\Kernel
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\database\seeders\DatabaseSeeder.php'
-                      line: 35
-                      function: __callStatic
-                      class: Illuminate\Support\Facades\Facade
-                      type: '::'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php'
-                      line: 36
-                      function: run
-                      class: Database\Seeders\DatabaseSeeder
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Container\Util.php'
-                      line: 41
-                      function: 'Illuminate\Container\{closure}'
-                      class: Illuminate\Container\BoundMethod
-                      type: '::'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php'
-                      line: 93
-                      function: unwrapIfClosure
-                      class: Illuminate\Container\Util
-                      type: '::'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php'
-                      line: 35
-                      function: callBoundMethod
-                      class: Illuminate\Container\BoundMethod
-                      type: '::'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Container\Container.php'
-                      line: 662
-                      function: call
-                      class: Illuminate\Container\BoundMethod
-                      type: '::'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Database\Seeder.php'
-                      line: 184
-                      function: call
-                      class: Illuminate\Container\Container
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Database\Seeder.php'
-                      line: 193
-                      function: 'Illuminate\Database\{closure}'
-                      class: Illuminate\Database\Seeder
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Database\Console\Seeds\SeedCommand.php'
-                      line: 70
-                      function: __invoke
-                      class: Illuminate\Database\Seeder
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Concerns\GuardsAttributes.php'
-                      line: 155
-                      function: 'Illuminate\Database\Console\Seeds\{closure}'
-                      class: Illuminate\Database\Console\Seeds\SeedCommand
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Database\Console\Seeds\SeedCommand.php'
-                      line: 69
-                      function: unguarded
-                      class: Illuminate\Database\Eloquent\Model
-                      type: '::'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php'
-                      line: 36
-                      function: handle
-                      class: Illuminate\Database\Console\Seeds\SeedCommand
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Container\Util.php'
-                      line: 41
-                      function: 'Illuminate\Container\{closure}'
-                      class: Illuminate\Container\BoundMethod
-                      type: '::'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php'
-                      line: 93
-                      function: unwrapIfClosure
-                      class: Illuminate\Container\Util
-                      type: '::'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php'
-                      line: 35
-                      function: callBoundMethod
-                      class: Illuminate\Container\BoundMethod
-                      type: '::'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Container\Container.php'
-                      line: 662
-                      function: call
-                      class: Illuminate\Container\BoundMethod
-                      type: '::'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Console\Command.php'
-                      line: 211
-                      function: call
-                      class: Illuminate\Container\Container
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\symfony\console\Command\Command.php'
-                      line: 326
-                      function: execute
-                      class: Illuminate\Console\Command
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Console\Command.php'
-                      line: 180
-                      function: run
-                      class: Symfony\Component\Console\Command\Command
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Console\Concerns\CallsCommands.php'
-                      line: 67
-                      function: run
-                      class: Illuminate\Console\Command
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Console\Concerns\CallsCommands.php'
-                      line: 28
-                      function: runCommand
-                      class: Illuminate\Console\Command
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Database\Console\Migrations\RefreshCommand.php'
-                      line: 135
-                      function: call
-                      class: Illuminate\Console\Command
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Database\Console\Migrations\RefreshCommand.php'
-                      line: 75
-                      function: runSeeder
-                      class: Illuminate\Database\Console\Migrations\RefreshCommand
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php'
-                      line: 36
-                      function: handle
-                      class: Illuminate\Database\Console\Migrations\RefreshCommand
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Container\Util.php'
-                      line: 41
-                      function: 'Illuminate\Container\{closure}'
-                      class: Illuminate\Container\BoundMethod
-                      type: '::'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php'
-                      line: 93
-                      function: unwrapIfClosure
-                      class: Illuminate\Container\Util
-                      type: '::'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php'
-                      line: 35
-                      function: callBoundMethod
-                      class: Illuminate\Container\BoundMethod
-                      type: '::'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Container\Container.php'
-                      line: 662
-                      function: call
-                      class: Illuminate\Container\BoundMethod
-                      type: '::'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Console\Command.php'
-                      line: 211
-                      function: call
-                      class: Illuminate\Container\Container
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\symfony\console\Command\Command.php'
-                      line: 326
-                      function: execute
-                      class: Illuminate\Console\Command
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Console\Command.php'
-                      line: 180
-                      function: run
-                      class: Symfony\Component\Console\Command\Command
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\symfony\console\Application.php'
-                      line: 1081
-                      function: run
-                      class: Illuminate\Console\Command
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\symfony\console\Application.php'
-                      line: 320
-                      function: doRunCommand
-                      class: Symfony\Component\Console\Application
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\symfony\console\Application.php'
-                      line: 174
-                      function: doRun
-                      class: Symfony\Component\Console\Application
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php'
-                      line: 201
-                      function: run
-                      class: Symfony\Component\Console\Application
-                      type: '->'
-                    -
-                      file: 'D:\workspace_php\fudy_api\artisan'
-                      line: 35
-                      function: handle
-                      class: Illuminate\Foundation\Console\Kernel
-                      type: '->'
+                  success: false
+                  message: 'Pin Expired'
+                  errors:
+                    pin_message:
+                      - 'Invalid Pin please try again later'
+                  code: 422
                 properties:
+                  success:
+                    type: boolean
+                    example: false
                   message:
                     type: string
-                    example: 'View [error-page] not found.'
-                  exception:
-                    type: string
-                    example: InvalidArgumentException
-                  file:
-                    type: string
-                    example: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php'
-                  line:
+                    example: 'Pin Expired'
+                  errors:
+                    type: object
+                    properties:
+                      pin_message:
+                        type: array
+                        example:
+                          - 'Invalid Pin please try again later'
+                        items:
+                          type: string
+                  code:
                     type: integer
-                    example: 137
-                  trace:
-                    type: array
-                    example:
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php'
-                        line: 79
-                        function: findInPaths
-                        class: Illuminate\View\FileViewFinder
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\View\Factory.php'
-                        line: 137
-                        function: find
-                        class: Illuminate\View\FileViewFinder
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Foundation\helpers.php'
-                        line: 1017
-                        function: make
-                        class: Illuminate\View\Factory
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\app\Http\Controllers\Auth\PinVerificationController.php'
-                        line: 106
-                        function: view
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Routing\Controller.php'
-                        line: 54
-                        function: verifyPin
-                        class: App\Http\Controllers\Auth\PinVerificationController
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Routing\ControllerDispatcher.php'
-                        line: 43
-                        function: callAction
-                        class: Illuminate\Routing\Controller
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Routing\Route.php'
-                        line: 259
-                        function: dispatch
-                        class: Illuminate\Routing\ControllerDispatcher
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Routing\Route.php'
-                        line: 205
-                        function: runController
-                        class: Illuminate\Routing\Route
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
-                        line: 799
-                        function: run
-                        class: Illuminate\Routing\Route
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                        line: 141
-                        function: 'Illuminate\Routing\{closure}'
-                        class: Illuminate\Routing\Router
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Routing\Middleware\SubstituteBindings.php'
-                        line: 50
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                        line: 180
-                        function: handle
-                        class: Illuminate\Routing\Middleware\SubstituteBindings
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php'
-                        line: 159
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php'
-                        line: 125
-                        function: handleRequest
-                        class: Illuminate\Routing\Middleware\ThrottleRequests
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php'
-                        line: 87
-                        function: handleRequestUsingNamedLimiter
-                        class: Illuminate\Routing\Middleware\ThrottleRequests
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                        line: 180
-                        function: handle
-                        class: Illuminate\Routing\Middleware\ThrottleRequests
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                        line: 116
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
-                        line: 798
-                        function: then
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
-                        line: 777
-                        function: runRouteWithinStack
-                        class: Illuminate\Routing\Router
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
-                        line: 741
-                        function: runRoute
-                        class: Illuminate\Routing\Router
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Routing\Router.php'
-                        line: 730
-                        function: dispatchToRoute
-                        class: Illuminate\Routing\Router
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php'
-                        line: 200
-                        function: dispatch
-                        class: Illuminate\Routing\Router
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                        line: 141
-                        function: 'Illuminate\Foundation\Http\{closure}'
-                        class: Illuminate\Foundation\Http\Kernel
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php'
-                        line: 21
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull.php'
-                        line: 31
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\TransformsRequest
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                        line: 180
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php'
-                        line: 21
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TrimStrings.php'
-                        line: 40
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\TransformsRequest
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                        line: 180
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\TrimStrings
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ValidatePostSize.php'
-                        line: 27
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                        line: 180
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\ValidatePostSize
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance.php'
-                        line: 86
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                        line: 180
-                        function: handle
-                        class: Illuminate\Foundation\Http\Middleware\PreventRequestsDuringMaintenance
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Http\Middleware\HandleCors.php'
-                        line: 62
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                        line: 180
-                        function: handle
-                        class: Illuminate\Http\Middleware\HandleCors
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Http\Middleware\TrustProxies.php'
-                        line: 39
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                        line: 180
-                        function: handle
-                        class: Illuminate\Http\Middleware\TrustProxies
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php'
-                        line: 116
-                        function: 'Illuminate\Pipeline\{closure}'
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php'
-                        line: 175
-                        function: then
-                        class: Illuminate\Pipeline\Pipeline
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php'
-                        line: 144
-                        function: sendRequestThroughRouter
-                        class: Illuminate\Foundation\Http\Kernel
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php'
-                        line: 299
-                        function: handle
-                        class: Illuminate\Foundation\Http\Kernel
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php'
-                        line: 287
-                        function: callLaravelOrLumenRoute
-                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php'
-                        line: 92
-                        function: makeApiCall
-                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php'
-                        line: 45
-                        function: makeResponseCall
-                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php'
-                        line: 35
-                        function: makeResponseCallIfConditionsPass
-                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\knuckleswtf\scribe\src\Extracting\Extractor.php'
-                        line: 209
-                        function: __invoke
-                        class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\knuckleswtf\scribe\src\Extracting\Extractor.php'
-                        line: 163
-                        function: iterateThroughStrategies
-                        class: Knuckles\Scribe\Extracting\Extractor
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\knuckleswtf\scribe\src\Extracting\Extractor.php'
-                        line: 95
-                        function: fetchResponses
-                        class: Knuckles\Scribe\Extracting\Extractor
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\knuckleswtf\scribe\src\GroupedEndpoints\GroupedEndpointsFromApp.php'
-                        line: 124
-                        function: processRoute
-                        class: Knuckles\Scribe\Extracting\Extractor
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\knuckleswtf\scribe\src\GroupedEndpoints\GroupedEndpointsFromApp.php'
-                        line: 71
-                        function: extractEndpointsInfoFromLaravelApp
-                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\knuckleswtf\scribe\src\GroupedEndpoints\GroupedEndpointsFromApp.php'
-                        line: 49
-                        function: extractEndpointsInfoAndWriteToDisk
-                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\knuckleswtf\scribe\src\Commands\GenerateDocumentation.php'
-                        line: 51
-                        function: get
-                        class: Knuckles\Scribe\GroupedEndpoints\GroupedEndpointsFromApp
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php'
-                        line: 36
-                        function: handle
-                        class: Knuckles\Scribe\Commands\GenerateDocumentation
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Container\Util.php'
-                        line: 41
-                        function: 'Illuminate\Container\{closure}'
-                        class: Illuminate\Container\BoundMethod
-                        type: '::'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php'
-                        line: 93
-                        function: unwrapIfClosure
-                        class: Illuminate\Container\Util
-                        type: '::'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php'
-                        line: 35
-                        function: callBoundMethod
-                        class: Illuminate\Container\BoundMethod
-                        type: '::'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Container\Container.php'
-                        line: 662
-                        function: call
-                        class: Illuminate\Container\BoundMethod
-                        type: '::'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Console\Command.php'
-                        line: 211
-                        function: call
-                        class: Illuminate\Container\Container
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\symfony\console\Command\Command.php'
-                        line: 326
-                        function: execute
-                        class: Illuminate\Console\Command
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Console\Command.php'
-                        line: 180
-                        function: run
-                        class: Symfony\Component\Console\Command\Command
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\symfony\console\Application.php'
-                        line: 1081
-                        function: run
-                        class: Illuminate\Console\Command
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\symfony\console\Application.php'
-                        line: 320
-                        function: doRunCommand
-                        class: Symfony\Component\Console\Application
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\symfony\console\Application.php'
-                        line: 174
-                        function: doRun
-                        class: Symfony\Component\Console\Application
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Console\Application.php'
-                        line: 162
-                        function: run
-                        class: Symfony\Component\Console\Application
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php'
-                        line: 400
-                        function: call
-                        class: Illuminate\Console\Application
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Support\Facades\Facade.php'
-                        line: 353
-                        function: call
-                        class: Illuminate\Foundation\Console\Kernel
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\database\seeders\DatabaseSeeder.php'
-                        line: 35
-                        function: __callStatic
-                        class: Illuminate\Support\Facades\Facade
-                        type: '::'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php'
-                        line: 36
-                        function: run
-                        class: Database\Seeders\DatabaseSeeder
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Container\Util.php'
-                        line: 41
-                        function: 'Illuminate\Container\{closure}'
-                        class: Illuminate\Container\BoundMethod
-                        type: '::'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php'
-                        line: 93
-                        function: unwrapIfClosure
-                        class: Illuminate\Container\Util
-                        type: '::'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php'
-                        line: 35
-                        function: callBoundMethod
-                        class: Illuminate\Container\BoundMethod
-                        type: '::'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Container\Container.php'
-                        line: 662
-                        function: call
-                        class: Illuminate\Container\BoundMethod
-                        type: '::'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Database\Seeder.php'
-                        line: 184
-                        function: call
-                        class: Illuminate\Container\Container
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Database\Seeder.php'
-                        line: 193
-                        function: 'Illuminate\Database\{closure}'
-                        class: Illuminate\Database\Seeder
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Database\Console\Seeds\SeedCommand.php'
-                        line: 70
-                        function: __invoke
-                        class: Illuminate\Database\Seeder
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Database\Eloquent\Concerns\GuardsAttributes.php'
-                        line: 155
-                        function: 'Illuminate\Database\Console\Seeds\{closure}'
-                        class: Illuminate\Database\Console\Seeds\SeedCommand
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Database\Console\Seeds\SeedCommand.php'
-                        line: 69
-                        function: unguarded
-                        class: Illuminate\Database\Eloquent\Model
-                        type: '::'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php'
-                        line: 36
-                        function: handle
-                        class: Illuminate\Database\Console\Seeds\SeedCommand
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Container\Util.php'
-                        line: 41
-                        function: 'Illuminate\Container\{closure}'
-                        class: Illuminate\Container\BoundMethod
-                        type: '::'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php'
-                        line: 93
-                        function: unwrapIfClosure
-                        class: Illuminate\Container\Util
-                        type: '::'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php'
-                        line: 35
-                        function: callBoundMethod
-                        class: Illuminate\Container\BoundMethod
-                        type: '::'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Container\Container.php'
-                        line: 662
-                        function: call
-                        class: Illuminate\Container\BoundMethod
-                        type: '::'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Console\Command.php'
-                        line: 211
-                        function: call
-                        class: Illuminate\Container\Container
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\symfony\console\Command\Command.php'
-                        line: 326
-                        function: execute
-                        class: Illuminate\Console\Command
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Console\Command.php'
-                        line: 180
-                        function: run
-                        class: Symfony\Component\Console\Command\Command
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Console\Concerns\CallsCommands.php'
-                        line: 67
-                        function: run
-                        class: Illuminate\Console\Command
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Console\Concerns\CallsCommands.php'
-                        line: 28
-                        function: runCommand
-                        class: Illuminate\Console\Command
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Database\Console\Migrations\RefreshCommand.php'
-                        line: 135
-                        function: call
-                        class: Illuminate\Console\Command
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Database\Console\Migrations\RefreshCommand.php'
-                        line: 75
-                        function: runSeeder
-                        class: Illuminate\Database\Console\Migrations\RefreshCommand
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php'
-                        line: 36
-                        function: handle
-                        class: Illuminate\Database\Console\Migrations\RefreshCommand
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Container\Util.php'
-                        line: 41
-                        function: 'Illuminate\Container\{closure}'
-                        class: Illuminate\Container\BoundMethod
-                        type: '::'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php'
-                        line: 93
-                        function: unwrapIfClosure
-                        class: Illuminate\Container\Util
-                        type: '::'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php'
-                        line: 35
-                        function: callBoundMethod
-                        class: Illuminate\Container\BoundMethod
-                        type: '::'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Container\Container.php'
-                        line: 662
-                        function: call
-                        class: Illuminate\Container\BoundMethod
-                        type: '::'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Console\Command.php'
-                        line: 211
-                        function: call
-                        class: Illuminate\Container\Container
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\symfony\console\Command\Command.php'
-                        line: 326
-                        function: execute
-                        class: Illuminate\Console\Command
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Console\Command.php'
-                        line: 180
-                        function: run
-                        class: Symfony\Component\Console\Command\Command
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\symfony\console\Application.php'
-                        line: 1081
-                        function: run
-                        class: Illuminate\Console\Command
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\symfony\console\Application.php'
-                        line: 320
-                        function: doRunCommand
-                        class: Symfony\Component\Console\Application
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\symfony\console\Application.php'
-                        line: 174
-                        function: doRun
-                        class: Symfony\Component\Console\Application
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php'
-                        line: 201
-                        function: run
-                        class: Symfony\Component\Console\Application
-                        type: '->'
-                      -
-                        file: 'D:\workspace_php\fudy_api\artisan'
-                        line: 35
-                        function: handle
-                        class: Illuminate\Foundation\Console\Kernel
-                        type: '->'
-                    items:
-                      type: object
-                      properties:
-                        file:
-                          type: string
-                          example: 'D:\workspace_php\fudy_api\vendor\laravel\framework\src\Illuminate\View\FileViewFinder.php'
-                        line:
-                          type: integer
-                          example: 79
-                        function:
-                          type: string
-                          example: findInPaths
-                        class:
-                          type: string
-                          example: Illuminate\View\FileViewFinder
-                        type:
-                          type: string
-                          example: '->'
+                    example: 422
       tags:
         - Endpoints
       security: []
@@ -1370,7 +136,7 @@ paths:
                 name:
                   type: string
                   description: ''
-                  example: neque
+                  example: dolor
                 contact_no:
                   type: string
                   description: ''
@@ -1386,7 +152,7 @@ paths:
                 email:
                   type: string
                   description: ''
-                  example: zwiza@example.com
+                  example: cleora.flatley@example.com
                 password_confirmation:
                   type: string
                   description: ''
@@ -1422,7 +188,7 @@ paths:
                 password:
                   type: string
                   description: ''
-                  example: '^Q&aF0cT1g68$KL$RP'
+                  example: '--<h_]"'
                 account_type:
                   type: integer
                   description: ''
@@ -1493,6 +259,216 @@ paths:
                 - password
                 - password_confirmation
       security: []
+  /api/logout:
+    get:
+      summary: ''
+      operationId: getApiLogout
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Auth token is required'
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+  /api/categories:
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Auth token is required'
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Auth token is required'
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  '/api/categories/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    put:
+      summary: 'Update the specified resource in storage.'
+      operationId: updateTheSpecifiedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Auth token is required'
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the category.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /api/recipes:
+    get:
+      summary: 'Display a list of the Recipe.'
+      operationId: displayAListOfTheRecipe
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: 'Store a newly created Recipe in storage.'
+      operationId: storeANewlyCreatedRecipeInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  '/api/recipes/{id}':
+    get:
+      summary: 'Display the specified Recipe.'
+      operationId: displayTheSpecifiedRecipe
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    put:
+      summary: 'Update the specified Recipe in storage.'
+      operationId: updateTheSpecifiedRecipeInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    delete:
+      summary: 'Remove the specified Recipe from storage.'
+      operationId: removeTheSpecifiedRecipeFromStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the recipe.'
+        example: 1
+        required: true
+        schema:
+          type: integer
 tags:
   -
     name: Endpoints
