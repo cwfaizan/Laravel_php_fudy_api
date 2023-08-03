@@ -5,6 +5,7 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 use App\Models\Category;
+use App\Models\Order;
 use App\Models\Recipe;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Artisan;
@@ -26,7 +27,8 @@ class DatabaseSeeder extends Seeder
         $this->call(RoleSeeder::class);
         $this->call(UserSeeder::class);
         $this->call(CategorySeeder::class);
-        // $this->call(ShelfSeeder::class);
+        $this->call(MaizeSeeder::class);
+        Order::factory()->count(200)->create();
         // Book::factory()->count(1000)->create();
         // $this->call(BookAuthorSeeder::class);
         // $this->call(BookEditionSeeder::class);

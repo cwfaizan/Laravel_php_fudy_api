@@ -3,25 +3,26 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Models\Category;
+use App\Models\Maize;
+use App\Traits\ApiResponser;
 use Illuminate\Http\Request;
 use Knuckles\Scribe\Attributes\Header;
 
-class CategoryController extends Controller
+class MaizeController extends Controller
 {
+    use ApiResponser;
     /**
      * Display a listing of the resource.
      */
     #[Header("Authorization", example: "Auth token is required")]
     public function index()
     {
-        return $this->successResponse(Category::all(), 'Categories List');
+        return $this->successResponse(Maize::all(), 'Tables List');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    #[Header("Authorization", example: "Auth token is required")]
     public function store(Request $request)
     {
         //
@@ -46,7 +47,6 @@ class CategoryController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    #[Header("Authorization", example: "Auth token is required")]
     public function destroy(string $id)
     {
         //
