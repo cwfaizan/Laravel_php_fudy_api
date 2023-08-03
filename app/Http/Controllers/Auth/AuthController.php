@@ -110,7 +110,8 @@ class AuthController extends Controller
             'contact_no_verified' => 1,
             // 'email' => $request->email,
             // 'email_verified' => 0,
-            'active' => $request->account_type < 2 ? 1 : 0,
+            'active' => 1,
+            // 'active' => $request->account_type < 2 ? 1 : 0,
             'password' => Hash::make($request->password),
         ]);
         $user->roles()->attach(Role::where([['name', $request->account_type == 2 ? 'waiter' : 'customer']])->get(['id']));
@@ -120,13 +121,13 @@ class AuthController extends Controller
 
     #[BodyParam("contact_no", "string", example: "923001234567", required: true)]
     #[BodyParam("password", "string", required: true)]
-    #[BodyParam("account_type", "int", example: "1 for customer, 2 for waiter", required: true)]
+    // #[BodyParam("account_type", "int", example: "1 for customer, 2 for waiter", required: true)]
     public function login(Request $request)
     {
         $validator = Validator::make($request->all(), [
             'contact_no' => 'required|numeric|exists:users,contact_no',
             'password' => 'required|min:8|max:12',
-            'account_type' => ['required', Rule::in([1, 2]),],
+            // 'account_type' => ['required', Rule::in([1, 2]),],
         ]);
         if ($validator->fails()) {
             return $this->errorResponse($validator->errors(), 'error');
@@ -137,13 +138,15 @@ class AuthController extends Controller
         $credentials = ['contact_no' => $request->contact_no, 'password' => $request->password, 'active' => 1];
 
         if (Auth::attempt($credentials)) {
-            if (Auth::user()->hasAccount($request->account_type)) {
-                $token = $this->generateToken();
-                return $this->successResponse(['user_id' => [Auth::id()], 'name' => [Auth::user()->name], 'token_type' => ['Bearer'], 'token' => [$token->accessToken], 'token_expires_at' => [$token->token->expires_at], 'roles' => $token->token->scopes], 'successfully login');
-            } else {
-                $this->invalidateToken();
-                return $this->errorResponse(['auth' => ['Invalid login credentials']], 401);
-            }
+            $token = $this->generateToken();
+            return $this->successResponse(['user_id' => [Auth::id()], 'name' => [Auth::user()->name], 'token_type' => ['Bearer'], 'token' => [$token->accessToken], 'token_expires_at' => [$token->token->expires_at], 'roles' => $token->token->scopes], 'successfully login');
+            // if (Auth::user()->hasAccount($request->account_type)) {
+            //     $token = $this->generateToken();
+            //     return $this->successResponse(['user_id' => [Auth::id()], 'name' => [Auth::user()->name], 'token_type' => ['Bearer'], 'token' => [$token->accessToken], 'token_expires_at' => [$token->token->expires_at], 'roles' => $token->token->scopes], 'successfully login');
+            // } else {
+            //     $this->invalidateToken();
+            //     return $this->errorResponse(['auth' => ['Invalid login credentials']], 401);
+            // }
         }
         return $this->errorResponse(['auth' => ['Invalid login credentials']], 401);
     }
